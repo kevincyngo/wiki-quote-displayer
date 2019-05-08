@@ -19,7 +19,7 @@ function getQuote(callback) {
 
 function renderQuote() {
     getQuote(function (c) {
-        var static_text = "Quote of the day";
+        var static_text = "Quote of the Day";
 
         var pre_process_str = c.substr(static_text.length + 1);
         pre_process_str = pre_process_str.trim();
@@ -32,6 +32,7 @@ function renderQuote() {
         var quote = pre_process_str.substr(0, pre_process_index-1)
         $("#quotes").text(quote);
         $("#author").text(author);
+        $("#qotd").text(static_text);
     });
 }
 
